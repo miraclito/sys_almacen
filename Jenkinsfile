@@ -33,7 +33,7 @@ pipeline {
             steps {
                 timeout(time: 4, unit: 'MINUTES'){
                     withSonarQubeEnv('sonarqube'){
-                        sh "mvn org.sonarsource.scanner.maven:sonar-maven-plugin:3.9.0.2155:sonar -Pcoverage -f SysAlmacen/pom.xml"
+                        sh "mvn org.sonarsource.scanner.maven:sonar-maven-plugin:3.9.0.2155:sonar -Pcoverage -f pom.xml"
                     }
                 }
             }
